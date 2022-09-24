@@ -12,8 +12,7 @@ input{
     font-size: 16pt;
     padding: 10px 20px;
 }
-div#corpo-form{
-    /*background-color: red;*/
+#corpo-form{
     width: 420px;
     margin: 150px auto 0px auto;
 }
