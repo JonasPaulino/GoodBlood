@@ -1,33 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Doar</title>
 </head>
+
 <body>
   <div class="container">
-    <header>
+    <div class="containerBase">
+
       <div class="menu">
-        <a href="http://">Inicio</a>
-        <a id="btLogin" href="http://">Realizar login</a>
+        <div class="logo">
+          <img src="../../assets/img/logo_red.png" alt="">
+        </div>
+        <div class="links">
+          <a href="http://">Inicio</a>
+          <a id="btLogin" href="http://"><i class="fa fa-hospital-o"></i>login</a>
+        </div>
       </div>
-    </header>
-    <section>
-      <div class="panelForm">
-        <form action="">
-          <label for="">Vamos doar?</label>
-          <input type="text">
-          <button>Doar</button>
-        </form>
+
+      <div class="containerMeio">
+
+        <div class="containerForm">
+          <form action="" id="etapa1">
+            <h1>Sobre você</h1>
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="text" placeholder="Celular" required>
+            <input type="text" placeholder="Cidade">
+
+            <div class="btn-box">
+              <button type="button" id="avanca1"> <i class="fa fa-arrow-right"> </i>Abançar</button>
+            </div>
+          </form>
+
+          <form action="" id="etapa2">
+            <h1>Sobre sua saúde</h1>
+            <div class="pergunta">
+              <p>Apresenta sintomas gripais?</p><br>
+              <div class="resposta">
+                <label for="">Sim
+                  <input type="radio" name="gripado" value="Sim">
+                </label>
+
+                <label for="">Não
+                  <input type="radio" name="gripado" value="Não">
+                </label>
+              </div>
+            </div>
+
+            <div class="pergunta">
+              <p>Fez alguma ciguria recentemente?</p><br>
+              <div class="resposta">
+                <label for="">Sim
+                  <input type="radio" class="simNao" value="Sim">
+                </label>
+
+                <label for="">Não
+                  <input type="radio" class="simNao" value="Não">
+                </label>
+              </div>
+            </div>
+
+
+            <div class="btn-box">
+              <button type="button" id="volta1" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
+              <button type="button" id="avanca2"> <i class="fa fa-arrow-right"></i> Abançar</button>
+            </div>
+          </form>
+
+          <form action="" id="etapa3">
+            <h1>Sobre seu corpo</h1>
+            <div class="pergunta">
+              <p>Se alimentou bem hoje?</p><br>
+              <div class="resposta">
+                <label for="">Sim
+                  <input type="radio" name="gripado" value="Sim">
+                </label>
+
+                <label for="">Não
+                  <input type="radio" name="gripado" value="Não">
+                </label>
+              </div>
+            </div>
+
+            <div class="pergunta">
+              <p>Doou sangue nos últimos 3 meses</p><br>
+              <div class="resposta">
+                <label for="">Sim
+                  <input type="radio" class="simNao" value="Sim">
+                </label>
+
+                <label for="">Não
+                  <input type="radio" class="simNao" value="Não">
+                </label>
+              </div>
+            </div>
+
+
+            <div class="btn-box">
+              <button type="button" id="volta2" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
+              <button type="submit"> <i class="fa fa-check"></i> Finalizar</button>
+            </div>
+          </form>
+
+          <div class="barra-etapas">
+            <div class="" id="progresso"></div>
+            <div class="etpa-coluna"><small>Etapa 1</small></div>
+            <div class="etpa-coluna"><small>Etapa 2</small></div>
+            <div class="etpa-coluna"><small>Etapa 3</small></div>
+          </div>
+        </div>
+
+        <div class="bannerLateral">
+          <div class="title_p">
+            <p>Bem vindo Good Blood</p>
+          </div>
+          <div class="titulo_h4">
+            <h4>Descubra agora mesmo se você está apto a doar.</h4>
+          </div>
+          <div class="title_h1">
+            <h1>
+              Uma doação pode salvar vidas. Faça a diferença!
+            </h1>
+          </div>
+        </div>
+
       </div>
-    </section>
-    <footer>
-      <h6>Copyright © 2022 GoodBlood</h6>
-      <h6>Powered by GoodBlood</h6>
-    </footer>
+      <div class="footer">
+        <p>Copyright © 2022 GoodBlood</p>
+        <p>Powered by GoodBlood</p>
+      </div>
+    </div>
   </div>
+  <script src="./scritp.js"></script>
 </body>
+
 </html>
