@@ -8,14 +8,27 @@
     <title>Login</title>
 </head>
 <body>
-    <div id="corpo-form">
-    <h1>Login</h1>
-    <form action="processa.php" method="post">
-        <input type="email" placeholder="Usuário">
-        <input type="password" placeholder="Senha">
-        <input type="submit" placeholder="ACESSAR">
-        <a href="">Não está cadastrado?<strong>Cadastre-se!</strong></a>
-    </form>
+<div class="container">
+        <h2>Login</h2>
+        <form action="index.html" method="post">
+            <div class="input-field">
+                <input type="text" id="nome" placeholder="alguma coisa">
+                <label for="nome">Nome:</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" id="senha" placeholder="alguma coisa">
+                <label for="senha">Senha:</label>
+            </div>
+
+            <div class="center">
+                <button>Entrar</button>
+            </div>
+        </form>
+        <div class="links-uteis">
+            <a href=""><p>Esqueceu a sua senha ?</p></a>
+            <a href=""><p>Ainda não sou cadastrado</p></a>
+        </div>
     </div>
 </body>
 </html>
