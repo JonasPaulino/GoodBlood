@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+input{
+    display: block;
+    height: 55px;
+    width: 450px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: 16pt;
+    padding: 10px 20px;
+}
+div#corpo-form{
+    background-color: red;
+    width: 420px;
+    margin: 150px auto 0px auto;
+}
