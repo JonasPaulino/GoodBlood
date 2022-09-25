@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $doador = $_GET['doador'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +23,8 @@
       <div class="texto">
         <h1>Você está apto!</h1>
 
-        <p>Jonas, sua validação foi positiva, isso significa que você pode doar! Mas não se preocupe uma de nossas
-          unidade
-          entrará em contato com você.</p>
-
-        <button><i class="fa fa-check"></i>Finalizar</button>
+        <p> <b><?php echo($doador) ?></b>, sua validação foi positiva, isso significa que você pode doar! Mas não se preocupe uma de nossas unidade entrará em contato com você.</p>
+        <a href="../../index.html"> <i class="fa fa-check"></i> Finalizar</a>
       </div>
     </div>
   </div>

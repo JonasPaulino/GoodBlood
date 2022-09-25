@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  if(!empty($_GET['apto'])){
+    $apto = $_GET['apto'];
+
+    if ($apto == "NAO"){
+      echo "<script> window.onload = function() {
+        swal('Atenção!', 'Infelizmente você não pode doar neste momento, tente novamente em outro dia.', 'info');    
+      }; </script>";
+    }
+  };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +42,17 @@
       </div>
 
       <div class="containerMeio">
+        <form action="../../model/processa_formulario.php" id="idforms" class="containerForm" method="POST"
+          onsubmit="return validaSeEstaApito()">
 
-        <div class="containerForm">
-          <form action="" id="etapa1">
+          <div class="barra-etapas">
+            <div class="" id="progresso"></div>
+            <div class="etpa-coluna"><small>Etapa 1</small></div>
+            <div class="etpa-coluna"><small>Etapa 2</small></div>
+            <div class="etpa-coluna"><small>Etapa 3</small></div>
+          </div>
+
+          <div class="forms" id="etapa1">
             <h1>Sobre você</h1>
             <input type="text" name="nome" placeholder="Nome Completo" required>
             <input type="tel" name="celular" placeholder="(00) 0000-0000" maxlength="16" size="16" id="celular"
@@ -43,9 +64,9 @@
                 <i class="fa fa-arrow-right"></i>Abançar
               </button>
             </div>
-          </form>
+          </div>
 
-          <form action="" id="etapa2">
+          <div class="forms" id="etapa2">
             <div class="tituloEtapa">
               <p id="tituloEtapa2"></p>
               <h1>Sobre sua saúde</h1>
@@ -82,9 +103,9 @@
               <button type="button" id="volta1" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
               <button type="button" id="avanca2"> <i class="fa fa-arrow-right"></i> Abançar</button>
             </div>
-          </form>
+          </div>
 
-          <form action="" id="etapa3">
+          <div class="forms" id="etapa3">
             <div class="tituloEtapa">
               <p id="tituloEtapa3"></p>
               <h1>Sobre seu corpo</h1>
@@ -116,19 +137,17 @@
                 </div>
               </div>
             </div>
+
+            <input type="hidden" id="aptidao" name="aptidao" value="Jonas">
+
             <div class="btn-box">
               <button type="button" id="volta2" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
-              <button type="submit"> <i class="fa fa-check"></i> Finalizar</button>
+              <button type="submit" name="submit" id="finalizar"> <i class="fa fa-check"></i>
+                Finalizar</button>
             </div>
-          </form>
-
-          <div class="barra-etapas">
-            <div class="" id="progresso"></div>
-            <div class="etpa-coluna"><small>Etapa 1</small></div>
-            <div class="etpa-coluna"><small>Etapa 2</small></div>
-            <div class="etpa-coluna"><small>Etapa 3</small></div>
           </div>
-        </div>
+
+        </form>
 
         <div class="bannerLateral">
           <div class="title_p">

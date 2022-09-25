@@ -8,6 +8,9 @@
   var Volta1 = document.getElementById("volta1");
   var Volta2 = document.getElementById("volta2");
 
+  var Finalizar = document.getElementById("finalizar");
+  var Apito = document.getElementById("aptidao");
+
   var Progresso = document.getElementById("progresso");
 
   var nome,celular,cidade;
@@ -17,15 +20,15 @@
   var primeiroNome;
 
   function pegaValorInput(){
-    nome = document.forms["etapa1"]["nome"].value;
-    celular = document.forms["etapa1"]["celular"].value;
-    cidade = document.forms["etapa1"]["cidade"].value;
+    nome      = document.forms["idforms"]["nome"].value;
+    celular   = document.forms["idforms"]["celular"].value;
+    cidade    = document.forms["idforms"]["cidade"].value;
 
-    gripado = document.forms["etapa2"]["gripado"].value;
-    cirurgia = document.forms["etapa2"]["cirurgia"].value;
+    gripado   = document.forms["idforms"]["gripado"].value;
+    cirurgia  = document.forms["idforms"]["cirurgia"].value;
 
-    alimentou = document.forms["etapa3"]["alimentou"].value;
-    doou = document.forms["etapa3"]["doou"].value;
+    alimentou = document.forms["idforms"]["alimentou"].value;
+    doou      = document.forms["idforms"]["doou"].value;
 
 
     var fullName = nome.split(' '),
@@ -77,7 +80,36 @@
       Progresso.style.width  ="240px";
   }
 
+  function validaSeEstaApito() {
+    pegaValorInput();
 
+    //valida ultima etapa
+    if(alimentou == "" || doou == ""){
+      swal("Atenção!", "Responda todas as perguntas para avançar.", "warning"); 
+      return false;
+    }
+    else {
+
+      if (gripado == "Não" && cirurgia =="Não" && alimentou == "Não" && doou == "Não") {
+        Apito.value = "SIM";
+        return true;
+      } else { 
+
+        //avisa que não está apto e redireciona para tela de preencher novamente.
+        swal("Atenção!",
+         "Infelizmente você não está apto a doar neste momento.",
+          "info").then((result)  =>{
+            window.location.href = "./index.php";
+          }); 
+        
+        Apito.value = "NAO"; 
+        return false;
+      }
+
+    }
+  }
+
+  //formata mascara de celular
   document.getElementById('celular').addEventListener('input', function (e) {
     var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,4})(\d{0,4})/);
     e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');

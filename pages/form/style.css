@@ -122,7 +122,7 @@ h1{
   margin-bottom: 0px;
 }
 
-.containerForm form{
+.containerForm .forms{
   width: 280px;
   position: absolute;
   top: 80px;
@@ -130,7 +130,7 @@ h1{
   transition: 0.5s;
 }
 
-form input{
+.forms input{
   width: 100%;
   padding: 10px 5px;
   margin: 5px 0;
@@ -144,7 +144,7 @@ form input{
   color: var(--sexta);
 }
 
-form input[type='radio'] {
+.forms input[type='radio'] {
   accent-color: var(--primaria);
 }
 

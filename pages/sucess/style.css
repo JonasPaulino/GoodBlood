@@ -43,17 +43,30 @@ p{
   color: rgb(106, 71, 71);
 }
 
-button{
+a{
   margin: 10px;
   height: 40px;
   width: 50%;
   border: none;
-  background: red;
-  color: white;
   border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  background: white;
+  border: 1px solid red;
+
 }
 
-button i{
+a:hover{
+  background: red;
+  color: white;
+  border: 1px solid white;
+}
+
+a i{
   margin-right: 5px;
 }
 
