@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+  </link>
+
   <title>Doar</title>
 </head>
 
@@ -29,44 +33,51 @@
         <div class="containerForm">
           <form action="" id="etapa1">
             <h1>Sobre você</h1>
-            <input type="text" placeholder="Nome Completo" required>
-            <input type="text" placeholder="Celular" required>
-            <input type="text" placeholder="Cidade">
+            <input type="text" name="nome" placeholder="Nome Completo" required>
+            <input type="text" name="celular" placeholder="(00) 0000-0000" maxlength="16" size="16" id="celular"
+              required>
+            <input type="text" name="cidade" placeholder="Cidade">
 
             <div class="btn-box">
-              <button type="button" id="avanca1"> <i class="fa fa-arrow-right"> </i>Abançar</button>
+              <button type="button" id="avanca1">
+                <i class="fa fa-arrow-right"></i>Abançar
+              </button>
             </div>
           </form>
 
           <form action="" id="etapa2">
-            <h1>Sobre sua saúde</h1>
-            <div class="pergunta">
-              <p>Apresenta sintomas gripais?</p><br>
-              <div class="resposta">
-                <label for="">Sim
-                  <input type="radio" name="gripado" value="Sim">
-                </label>
-
-                <label for="">Não
-                  <input type="radio" name="gripado" value="Não">
-                </label>
-              </div>
+            <div class="tituloEtapa">
+              <p id="tituloEtapa2"></p>
+              <h1>Sobre sua saúde</h1>
             </div>
+            <div class="mensagemEtapa">
+              <div class="pergunta">
+                <p>Apresenta sintomas gripais?</p><br>
+                <div class="resposta">
+                  <label for="">Sim
+                    <input type="radio" name="gripado" value="Sim">
+                  </label>
 
-            <div class="pergunta">
-              <p>Fez alguma ciguria recentemente?</p><br>
-              <div class="resposta">
-                <label for="">Sim
-                  <input type="radio" class="simNao" value="Sim">
-                </label>
-
-                <label for="">Não
-                  <input type="radio" class="simNao" value="Não">
-                </label>
+                  <label for="">Não
+                    <input type="radio" name="gripado" value="Não">
+                  </label>
+                </div>
               </div>
+
+              <div class="pergunta">
+                <p>Passou por alguma cirurgia recentemente?</p><br>
+                <div class="resposta">
+                  <label for="">Sim
+                    <input type="radio" name="cirurgia" class="simNao" value="Sim">
+                  </label>
+
+                  <label for="">Não
+                    <input type="radio" name="cirurgia" class="simNao" value="Não">
+                  </label>
+                </div>
+              </div>
+
             </div>
-
-
             <div class="btn-box">
               <button type="button" id="volta1" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
               <button type="button" id="avanca2"> <i class="fa fa-arrow-right"></i> Abançar</button>
@@ -74,34 +85,37 @@
           </form>
 
           <form action="" id="etapa3">
-            <h1>Sobre seu corpo</h1>
-            <div class="pergunta">
-              <p>Se alimentou bem hoje?</p><br>
-              <div class="resposta">
-                <label for="">Sim
-                  <input type="radio" name="gripado" value="Sim">
-                </label>
+            <div class="tituloEtapa">
+              <p id="tituloEtapa3"></p>
+              <h1>Sobre seu corpo</h1>
+            </div>
+            <div class="mensagemEtapa">
+              <div class="pergunta">
+                <p>Se alimentou bem hoje?</p><br>
+                <div class="resposta">
+                  <label for="">Sim
+                    <input type="radio" name="alimentou" value="Sim">
+                  </label>
 
-                <label for="">Não
-                  <input type="radio" name="gripado" value="Não">
-                </label>
+                  <label for="">Não
+                    <input type="radio" name="alimentou" value="Não">
+                  </label>
+                </div>
+              </div>
+
+              <div class="pergunta">
+                <p>Doou sangue nos últimos 3 meses</p><br>
+                <div class="resposta">
+                  <label for="">Sim
+                    <input type="radio" name="doou" class="simNao" value="Sim">
+                  </label>
+
+                  <label for="">Não
+                    <input type="radio" name="doou" class="simNao" value="Não">
+                  </label>
+                </div>
               </div>
             </div>
-
-            <div class="pergunta">
-              <p>Doou sangue nos últimos 3 meses</p><br>
-              <div class="resposta">
-                <label for="">Sim
-                  <input type="radio" class="simNao" value="Sim">
-                </label>
-
-                <label for="">Não
-                  <input type="radio" class="simNao" value="Não">
-                </label>
-              </div>
-            </div>
-
-
             <div class="btn-box">
               <button type="button" id="volta2" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
               <button type="submit"> <i class="fa fa-check"></i> Finalizar</button>
