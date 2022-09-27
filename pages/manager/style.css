@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    background: url(../../assets/img/doar.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8),        rgba(255, 255, 255, 0.8),        rgba(255, 255, 255, 0.8),        rgba(255, 255, 255, 0.8),
+    rgba(255, 0, 0, 0.8)), url(../../assets/img/doar.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
+
 .container{
     width: 350px;
     background: rgba(87, 1, 1, 0.5);
@@ -89,3 +93,60 @@ input:not(:placeholder-shown) + label{
 input::placeholder{
     color:transparent;
 }
+
+
+.footer{
+    display: flex;
+    left: 0;
+    bottom: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer p{
+    color: var(--segunda);
+    font-size: 12px;
+  }
+
+  .menu{
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .menu .logo img{
+    width: 8%;
+  }
+  
+  .menu .links{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  
+  .links a{
+    text-decoration: none;
+    padding: 10px ;
+    text-align: center;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: var(--primaria);
+    cursor: pointer;
+    width: 100px;
+    margin-left: 5px;
+  }
+  
+  .menu a:hover{
+    color: var(--segunda);
+    background: var(--primaria); 
+  }
+  
+  .menu i{
+    margin-right: 10px;
+  }

@@ -8,7 +8,16 @@
     <title>Login</title>
 </head>
 <body>
-<div class="container">
+    <div class="menu">
+        <div class="logo">
+          <img src="../../assets/img/logo_red.png" alt="">
+        </div>
+        <div class="links">
+            <a href="../../index.html">Inicio</a>
+        </div>
+    </div>
+
+    <div class="container">
         <h2>Login</h2>
         <form action="index.html" method="post">
             <div class="input-field">
@@ -30,5 +39,9 @@
             <a href=""><p>Ainda não sou cadastrado</p></a>
         </div>
     </div>
+    <div class="footer">
+            <p>Copyright © 2022 GoodBlood</p>
+            <p>Powered by GoodBlood</p>
+      </div>
 </body>
 </html>
