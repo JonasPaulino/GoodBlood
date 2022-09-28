@@ -19,19 +19,19 @@
 
     <div class="container">
         <h2>Login</h2>
-        <form action="index.html" method="post">
+        <form action="../../model/processa_login.php" method="post">
             <div class="input-field">
-                <input type="text" id="nome" placeholder="alguma coisa">
+                <input type="text" id="nome" name="nome" placeholder="alguma coisa">
                 <label for="nome">Nome:</label>
             </div>
 
             <div class="input-field">
-                <input type="password" id="senha" placeholder="alguma coisa">
+                <input type="password" name="senha" id="senha" placeholder="alguma coisa">
                 <label for="senha">Senha:</label>
             </div>
 
             <div class="center">
-                <button>Entrar</button>
+                <button type="submit" name="submit" >Entrar</button>
             </div>
         </form>
         <div class="links-uteis">
