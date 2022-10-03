@@ -33,11 +33,11 @@
 
       <div class="menu">
         <div class="logo">
-          <img src="../../assets/img/logo_red.png" alt="">
+          <a href="../../index.html"><img src="../../assets/img/logo_red.png" alt=""></a>
         </div>
         <div class="links">
-          <a href="http://">Inicio</a>
-          <a id="btLogin" href="http://"><i class="fa fa-hospital-o"></i>login</a>
+          <a href="../../index.html">Inicio</a>
+          <a id="btLogin" href="../manager/login.php"><i class="fa fa-hospital-o"></i>login</a>
         </div>
       </div>
 

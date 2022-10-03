@@ -1,6 +1,12 @@
 <?php
         session_start();
         include_once("../../model/conexao.php");
+
+        if ((!isset($_SESSION['nome']))) {
+            $logou = 'tentouDireto';
+            $_SESSION['logou'] = $logou;
+            header("location: ../../pages/manager/login.php");
+        };
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,10 +29,12 @@
                     <a href="http://">Inicio</a>
                 </div>
             </div>
-            <div class="tabela">
-                <div class="pesquisa">
+            <div>
+            <div class="pesquisa">
                     <h1> APTIDÃO PARA DOAÇÃO </h1>
                 </div>
+            </div>
+            <div class="containerTabela">
                 <?php
                     $result_dados = "SELECT * FROM aptidao";
                     $resultado_dados = mysqli_query($conn, $result_dados);
@@ -34,7 +42,7 @@
                 ?>  
                 
                 
-                <table border="1">
+                <table id="tabela" border="1">
                     <thead>
                         <tr>
                             <th> ID </th>

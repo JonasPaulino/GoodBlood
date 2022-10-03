@@ -311,3 +311,11 @@ h1{
   text-align: center;
   margin-bottom: 10px;
 }
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a:hover{
+  background: none;
+}
