@@ -6,77 +6,88 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Inicio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <title>GoodBlood</title>
 </head>
 
 <body>
+  <div class="container">
+    <div class="containerBase">
 
-  <header class="cabecalho">
-    <nav class="cabecalho-menu">
-      <a class="cabecalho-menu-item" href="./pages/manager/login.php">Login</a>
-      <a class="cabecalho-menu-item" href="#sobre_nos">Sobre Nós</a>
-      <a class="cabecalho-menu-item" href="#nosso_objetivo">Nosso Objetivo</a>
-    </nav>
-  </header>
-
-  <hr>
-
-  <main>
-    <section>
-      <div class="conteudo-principal">
-        <picture>
-          <source srcset="/image/good_bloood.png" media="(max-width: px)">
-          <img class="conteudo-principal-imagem" src="./assets/img/logo.png" alt="logo da Glood Blood">
-        </picture>
-        <div class="conteudo-principal-escrito">
-          <h1>Uma ação pode salvar vidas. Faça a diferença!</h1>
-          <p>Em cada doação, uma pessoa doa, no máximo, 450 ml de sangue e essa única contribuição pode salvar a vida de
-            até quatro pessoas. É só apertar no botão abaixo, preencher nosso formulário e descobrir se você está apto a
-            doar sangue.</p>
-          <!-- <button id="doar">DOAR</button> -->
-          <a id="doar" href="./pages/form/index.php">DOAR</a>
+      <div class="menu">
+        <div class="logo">
+          <a href="./index.html"><img src="./assets/img/logo_red.png" alt=""></a>
+        </div>
+        <div class="links">
+          <a href="">Inicio</a>
+          <a href="#BlocoSobre">Sobre</a>
+          <a id="btLogin" href="./pages/manager/login.php"><i class="fa fa-hospital-o"></i>login</a>
         </div>
       </div>
-    </section>
-  </main>
 
-  <hr>
-
-  <main>
-    <main class="container">
-      <div class="card-container">
-        <div class="card-text">
-          Somos a Good Blood, um sistema feito para as pessoas que desejam doar sangue. Com um formulário simples e
-          objetivo, informamos a você doador, se você se encontra apto ou não para doação.
+      <div id="sessaoInicio" class="containerMeio">
+        <div class="bannerLateral">
+          <div class="title_p">
+            <p>Bem vindo!</p>
+          </div>
+          <div class="titulo_h4">
+            <h1>Uma ação pode salvar vidas. Faça a diferença!</h1>
+          </div>
+          <div class="texto">
+            <p>
+              Em cada doação, uma pessoa doa, no máximo, 450 ml de sangue e essa única contribuição pode salvar a vida
+              de até quatro pessoas. É só apertar no botão abaixo, preencher nosso formulário e descobrir se você está
+              apto a doar sangue.</p>
+          </div>
+          <div class="btn-box">
+            <a href="./pages/form/index.php"><i id="SobreBtnIcon" class="fa fa-heart"></i>Doar</a>
+          </div>
         </div>
-        <div class="card">
-          <div class="card-wrapper">
-            <a name="sobre_nos">
-              <h2>Sobre Nós</h2>
-            </a>
+        <div class="icone">
+          <img src="./assets/img/doctor.svg" alt="">
+        </div>
+      </div>
+      <div id="BlocoSobre" class="containerSobre">
+        <div class="sobreImagem">
+          <img src="./assets/img/dev.svg" alt="">
+        </div>
+        <div class="sobreTexto">
+          <div class="sobreSubDiv">
+
+            <div class="sobreTitulo">
+              <h1>Sobre nós!''</h1>
+            </div>
+            <div class="sobreDivisor">
+              <div id="divisor"></div>
+            </div>
+            <div class="SobreSubTexto">
+              <p>
+                GoodBlood ou Sangue Bom(Traduzido), é um sistema feito para as pessoas que desejam doar sangue. Com um
+                formulário simples
+                e objetivo, informamos a você doador, se você está apto ou não para doação.
+              </p><br>
+              <p>A doação de sangue é um gesto de amor e bondade, que pode salvar vidas. A good blood tem como propósito
+                solidarizar a população para doação de sangue de forma fácil e segura. O sangue é fundamental e sem ele
+                é impossível viver, doe sangue, faça sua parte!</p>
+            </div>
+            <div class="sobreBotao">
+              <div class="btn-box">
+                <a href="./pages/form/index.php"><i id="SobreBtnIcon" class="fa fa-heart"></i>Doar</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="card-container">
-        <div class="card">
-          <div class="card-wrapper">
-            <a name="nosso_objetivo">
-              <h2>Nosso Objetivo</h2>
-            </a>
-          </div>
-        </div>
-        <div class="card-text">
-          A doação de sangue é um gesto de amor e bondade, que pode salvar vidas. A good blood tem como propósito
-          solidarizar a população para doação de sangue de forma fácil e segura. O sangue é fundamental e sem ele é
-          impossível viver, doe sangue, faça sua parte!
-        </div>
-      </div>
-    </main>
 
-    <footer class="footer">
-      <p>Copyright © 2022 GoodBlood</p>
-      <p>Powered by GoodBlood</p>
-    </footer>
+      <div class="footer">
+        <p>Copyright © 2022 GoodBlood</p>
+        <p>Powered by GoodBlood</p>
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>
