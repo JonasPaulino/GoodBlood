@@ -95,15 +95,15 @@
         return true;
       } else { 
 
-        //avisa que não está apto e redireciona para tela de preencher novamente.
-        swal("Atenção!",
-         "Infelizmente você não está apto a doar neste momento.",
-          "info").then((result)  =>{
-            window.location.href = "./index.php";
-          }); 
+        // //avisa que não está apto e redireciona para tela de preencher novamente.
+        // swal("Atenção!",
+        //  "Infelizmente você não está apto a doar neste momento.",
+        //   "info").then((result)  =>{
+        //     window.location.href = "../../model/processa_formulario.php";
+        //   }); 
         
         Apito.value = "NAO"; 
-        return false;
+        return true; //retorna true para que o processo siga e possa gravar os que não estão aptos
       }
 
     }

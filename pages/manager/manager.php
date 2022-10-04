@@ -109,6 +109,5 @@
         </div>
     </div> 
     </body>
-
     <script src="./manager.js"></script>
 </html>

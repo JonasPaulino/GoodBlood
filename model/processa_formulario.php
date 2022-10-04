@@ -1,9 +1,9 @@
 <?php
     session_start();
     include_once('conexao.php');
-
+    var_dump($_POST);
     if(isset($_POST['submit'])){
-  
+       
         $nome         = $_POST['nome'];
         $celular      = $_POST['celular'];
         $cidade       = $_POST['cidade'];
@@ -22,12 +22,12 @@
              $_SESSION['msgSalvar'] = 'Não';
          }
          
-         if($aptidao == "SIM"){
+          if($aptidao == "SIM"){
 
-             header("location: ../pages/sucess/index.php?doador=$nome");
-         }else{
-             header("location: ../pages/form/index.php?apto=$aptidao"); 
-         };
+              header("location: ../pages/sucess/index.php?doador=$nome");
+          }else{
+              header("location: ../pages/form/index.php?apto=$aptidao"); 
+          };
     };
 
 ?>

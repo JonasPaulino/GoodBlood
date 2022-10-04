@@ -44,6 +44,7 @@
       <div class="containerMeio">
         <form action="../../model/processa_formulario.php" id="idforms" class="containerForm" method="POST"
           onsubmit="return validaSeEstaApito()">
+        <!-- <form action="../../model/processa_formulario.php" id="idforms" class="containerForm" method="POST"> -->
 
           <div class="barra-etapas">
             <div class="" id="progresso"></div>
@@ -112,7 +113,7 @@
             </div>
             <div class="mensagemEtapa">
               <div class="pergunta">
-                <p>Se alimentou bem hoje?</p><br>
+                <p>Está de jejum?</p><br>
                 <div class="resposta">
                   <label for="">Sim
                     <input type="radio" name="alimentou" value="Sim">
