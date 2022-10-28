@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once('conexao.php');
-    var_dump($_POST);
+
     if(isset($_POST['submit'])){
        
         $nome         = $_POST['nome'];
