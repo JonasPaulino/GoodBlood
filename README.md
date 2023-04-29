@@ -1,9 +1,6 @@
 # Projeto Sangue Bom
 
-✅ Pagina incial apresentação <br>
-✅ Pagina de login <br>
-✅ Pagina de doar <br>
-✅ Pagina de gestão <br>
+[trello](https://trello.com/b/qQ5HXeY2/projeto-sangue-bom)
 
 <h1>Algumas imagens do projeto</h1>
 <h3>Tela inicial</h3>
