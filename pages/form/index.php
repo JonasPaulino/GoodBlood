@@ -103,7 +103,7 @@
             </div>
             <div class="btn-box">
               <button type="button" id="volta1" class="voltar"> <i class="fa fa-arrow-left"></i> Voltar</button>
-              <button type="button" id="avanca2"> <i class="fa fa-arrow-right"></i> Abançar</button>
+              <button type="button" id="avanca2"> <i class="fa fa-arrow-right"></i> Avançar</button>
             </div>
           </div>
 
@@ -153,7 +153,7 @@
 
         <div class="bannerLateral">
           <div class="title_p">
-            <p>Bem vindo Good Blood</p>
+            <p>Bem vindo ao Good Blood</p>
           </div>
           <div class="titulo_h4">
             <h4>Descubra agora mesmo se você está apto a doar.</h4>
