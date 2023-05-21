@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <title>Dashboard</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../form/form.html">Formulário</a>
+        <a href="../sobre/sobre.html">Sobre Nós</a>
+      </nav>
+    <h1>Dados dos Doadores</h1>
+   
+    <table id="doador-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Celular</th>
+                <th>Cidade</th>
+                <th>Nascimento</th>
+                <th>Apto para doar?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os dados dos doadores serão preenchidos aqui -->
+        </tbody>
+    </table>
+
+    <script>
+        // Função para fazer a requisição AJAX e preencher a tabela
+        function preencherTabela() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(this.responseText);
+                    if (response.success) {
+                        var doadores = response.doadores;
+                        var tableBody = document.getElementById("doador-table").getElementsByTagName("tbody")[0];
+                        for (var i = 0; i < doadores.length; i++) {
+                            var row = tableBody.insertRow(i);
+                            var cell1 = row.insertCell(0);
+                            var cell2 = row.insertCell(1);
+                            var cell3 = row.insertCell(2);
+                            var cell4 = row.insertCell(3);
+                            var cell5 = row.insertCell(4);
+                            cell1.innerHTML = doadores[i].nome;
+                            cell2.innerHTML = doadores[i].celular;
+                            cell3.innerHTML = doadores[i].cidade;
+                            cell4.innerHTML = doadores[i].nascimento;
+                            cell5.innerHTML = doadores[i].apto;
+                        }
+                    } else {
+                        console.log(response.message);
+                    }
+                }
+            };
+            xhttp.open("GET", "../../api/v2/login.php", true);
+            xhttp.send();
+        }
+
+        // Chamada da função para preencher a tabela
+        preencherTabela();
+    </script>
+</body>
+</html>

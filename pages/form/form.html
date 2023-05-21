@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+  <title>Formulário de Aptidão</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../login/login.html">Login</a>
+      <a href="../sobre/sobre.html">Sobre Nós</a>
+  </nav>
+  <h1>Formulário de Aptidão</h1>
+
+  <form id="aptidao-form">
+    <label for="nome_completo">Nome Completo:</label>
+    <input type="text" id="nome_completo" name="nome_completo" required>
+    
+    <label for="celular">Celular:</label>
+    <input type="text" id="celular" name="celular" required>
+    
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" name="cidade" required>
+    
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+    
+    <label for="apto">Apto:</label>
+    <input type="checkbox" id="apto" name="apto">
+    
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
